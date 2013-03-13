@@ -1,22 +1,17 @@
 html, body {
-	width: 100%;
-	height: 100%;
+	width: 98%;
+	height: 98%;
+}
+
+.footer {
+	float: bottom;
+	text-align: center;
 }
 
 .animal {
 	border: solid;
 	border-width: 2px;
 	border-color: black;
-}
-
-.bear {
-	float: left;
-	width: 40%;
-}
-
-.shark {
-	float: right;
-	width: 60%;
 }
 
 .bear, .shark {

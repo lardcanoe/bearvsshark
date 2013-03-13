@@ -3,22 +3,58 @@
 </head>
 
 <body>
-  {{> bearvsshark}}
-  {{> results}}
+	<table style="width: 100%; height: 100%">
+		<tr>
+			<td align="center">
+				{{> bearvsshark}}
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				{{> results}}
+			</td>
+		</tr>
+	</table>  
+	<div class="footer">
+		<a href="https://github.com/lardcanoe/bearvsshark" target="_blank">Credits</a>
+	</div>
 </body>
 
 <template name="bearvsshark">
-  <div class="bear" id="bear"><img src="bear.jpg" class="animal" /></div>
-  vs.
-  <div class="shark" id="shark"><img src="shark.jpg" class="animal" /></div>
+	<table style="width: 100%; height: 100%">
+		<tr>
+			<td align="center">
+				<div class="bear" id="bear"><img src="bear.jpg" class="animal" /></div>
+			</td>
+			<td align="center">
+				vs.
+			</td>
+			<td align="center">
+				<div class="shark" id="shark"><img src="shark.jpg" class="animal" /></div>
+			</td>
+		</tr>
+	</table>  	
 </template>
 
 <template name="results">
   {{#if voted}}
-    <br />
-    <br />
-	Bear: {{bear}}<br/>
-    Shark: {{shark}}<br />
-    Humans: {{humans}}
+	<table style="width: 100%; height: 100%">
+		<tr>
+			<td align="center">
+				Bear: {{bear}}
+			</td>
+			<td align="center">
+				
+			</td>
+			<td align="center">
+				Shark: {{shark}}
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" align="center">
+				Humans: {{humans}}
+			</td>
+		</tr>		
+	</table> 
   {{/if}}	
 </template>
