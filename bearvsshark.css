@@ -8,13 +8,22 @@ html, body {
 	text-align: center;
 }
 
+.result {
+	font-family: "Arial";
+	font-size: 30px; 
+	font-weight: bold;
+}
+
 .animal {
-	border: solid;
-	border-width: 2px;
-	border-color: black;
+  width: auto;
+  height : auto;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .bear, .shark {
+	width:300px;
+
 	-webkit-mask-image: -webkit-linear-gradient(#000, rgba(0,0,0,.9));
 	
 	-webkit-backface-visibility: hidden;

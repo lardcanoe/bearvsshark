@@ -6,13 +6,14 @@
 	<table style="width: 100%; height: 100%">
 		<tr>
 			<td align="center">
-				{{> bearvsshark}}
+				<table style="width: 100%; height: 100%">
+					{{> bearvsshark}}
+					{{> results}}
+				</table> 
 			</td>
 		</tr>
 		<tr>
-			<td align="center">
-				{{> results}}
-			</td>
+			<td height="100%"></td>
 		</tr>
 	</table>  
 	<div class="footer">
@@ -21,40 +22,40 @@
 </body>
 
 <template name="bearvsshark">
-	<table style="width: 100%; height: 100%">
-		<tr>
-			<td align="center">
-				<div class="bear" id="bear"><img src="bear.jpg" class="animal" /></div>
-			</td>
-			<td align="center">
-				vs.
-			</td>
-			<td align="center">
-				<div class="shark" id="shark"><img src="shark.jpg" class="animal" /></div>
-			</td>
-		</tr>
-	</table>  	
+	<tr>
+		<td align="right" width="50%"></td>			
+		<td align="right" width="300px">
+			<div class="bear" id="bear"><img src="bear1.jpg" class="animal" id="bearimage" /></div>
+		</td>
+		<td align="center" width="32px">
+			vs.
+		</td>
+		<td align="left" width="300px">
+			<div class="shark" id="shark"><img src="shark1.jpg" class="animal" id="sharkimage" /></div>
+		</td>
+		<td align="right" width="50%"></td>			
+	</tr>
 </template>
 
 <template name="results">
   {{#if voted}}
-	<table style="width: 100%; height: 100%">
-		<tr>
-			<td align="center">
-				Bear: {{bear}}
-			</td>
-			<td align="center">
-				
-			</td>
-			<td align="center">
-				Shark: {{shark}}
-			</td>
-		</tr>
-		<tr>
-			<td colspan="3" align="center">
-				Humans: {{humans}}
-			</td>
-		</tr>		
-	</table> 
+	<tr>
+		<td align="right" width="50%"></td>
+		<td align="right">
+			<div class="result">Bear: {{bear}}</div>
+		</td>
+		<td align="center">
+			
+		</td>			
+		<td align="left">
+			<div class="result">Shark: {{shark}}</div>
+		</td>
+		<td align="right" width="50%"></td>
+	</tr>
+	<tr>
+		<td colspan="5" align="center">
+			<div class="result">Humans: {{humans}}</div>
+		</td>
+	</tr>		
   {{/if}}	
 </template>
