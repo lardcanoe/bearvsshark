@@ -1,0 +1,24 @@
+<head>
+  <title>Bear vs. Shark</title>
+</head>
+
+<body>
+  {{> bearvsshark}}
+  {{> results}}
+</body>
+
+<template name="bearvsshark">
+  <div class="bear" id="bear"><img src="bear.jpg" class="animal" /></div>
+  vs.
+  <div class="shark" id="shark"><img src="shark.jpg" class="animal" /></div>
+</template>
+
+<template name="results">
+  {{#if voted}}
+    <br />
+    <br />
+	Bear: {{bear}}<br/>
+    Shark: {{shark}}<br />
+    Humans: {{humans}}
+  {{/if}}	
+</template>
